@@ -29,7 +29,7 @@ void Autocomplete::insert(string key) {
   node->is_end_word = true;
 }
 
-vector<string> Autocomplete::search(string prefix) {
+vector<string> Autocomplete::getSuggestions(string prefix) {
   TrieNode* node = root;
   for (char letter : prefix) {
     auto it = node->children.find(letter);

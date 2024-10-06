@@ -19,5 +19,5 @@ class Autocomplete {
   Autocomplete();
   void insert(string key);
   void findAllWords(TrieNode* node, string prefix, vector<string>& foundWords);
-  vector<string> search(string prefix);
+  vector<string> getSuggestions(string prefix);
 };
