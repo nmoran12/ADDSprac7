@@ -17,6 +17,7 @@ class Autocomplete {
 
  public:
   Autocomplete();
+  ~Autocomplete();
   void insert(string key);
   void findAllWords(TrieNode* node, string prefix, vector<string>& foundWords);
   vector<string> getSuggestions(string prefix);

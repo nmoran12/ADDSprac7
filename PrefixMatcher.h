@@ -18,6 +18,7 @@ class PrefixMatcher {
 
  public:
   PrefixMatcher();
+  ~PrefixMatcher();
   void insert(string address, int routerNumber);
   int selectRouter(string networkAddress);
 };

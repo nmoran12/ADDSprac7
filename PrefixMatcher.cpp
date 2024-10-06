@@ -6,6 +6,7 @@ using namespace std;
 #include "PrefixMatcher.h"
 
 PrefixMatcherTrieNode::PrefixMatcherTrieNode() { routerNumber = -1; };
+PrefixMatcherTrieNode::~PrefixMatcherTrieNode() {};
 
 PrefixMatcher::PrefixMatcher() : root(new PrefixMatcherTrieNode()) {};
 

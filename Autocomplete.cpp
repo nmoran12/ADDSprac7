@@ -7,6 +7,8 @@ using namespace std;
 
 Autocomplete::Autocomplete() { root = new TrieNode(); }
 
+Autocomplete::~Autocomplete() {}
+
 void Autocomplete::findAllWords(TrieNode* node, string prefix,
                                 vector<string>& foundWords) {
   if (node->is_end_word) {
@@ -22,7 +24,7 @@ void Autocomplete::insert(string key) {
   TrieNode* node = root;
   for (char letter : key) {
     if (!node->children[letter]) {
-      node->children[letter] = new TrieNode;
+      node->children[letter] = new TrieNode();
     }
     node = node->children[letter];
   }
